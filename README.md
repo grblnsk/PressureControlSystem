@@ -5,7 +5,7 @@
 ##### User Code - collectData.m 
 collectData.m is a user MATLAB interface to communicate with the Arduino Board. Its GUI shows figures with recent pressure levels values in the pneumatic artificial muscles, and allows to set new pressure values for each muscle.
 ##### Hardware Code - ArduinoDueCode.ino
-ArduinoDueCode.ino contains a hybrid of standard C++ for Arduino code and embedded C code for ARM Cortex-M3 processors to greatly improve measurement speed. It uses pressure_transducer.h and proportional_valve.h which needs to be added as Arduino libraries.
+ArduinoDueCode.ino contains a hybrid of standard C++ for Arduino code and embedded C code for ARM Cortex-M3 processors to greatly improve measurement speed. It uses pressure_transducer.h and proportional_valve.h which need to be added as Arduino libraries.
 
 ##### Overview of Hardware Setup
 A custom pressure regulation system was developed to minimize the errors that were observed when using off-the-shelf pressure regulators. The system was composed of:
