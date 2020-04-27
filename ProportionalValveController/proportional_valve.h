@@ -308,7 +308,7 @@ void pvalve__update(PValve* vlv, float measurement){
 	vlv->intpart = vlv->pid_integration * vlv->errorSum;
 	if (vlv->pid_integration == 0) vlv->intpart = 0;
 	vlv->derpart = vlv->pid_derivative *
-	( vlv->errors[0]+3*vlv->errors[1]-3*vlv->errors[2]-3*vlv->errors[3] )*0.1667;
+	( vlv->errors[0]+3*vlv->errors[1]-3*vlv->errors[2]-vlv->errors[3] )*0.1667;
 	vlv->normCtrlSig = (vlv->pid_gain*vlv->errors[0]+ vlv->intpart+ vlv->derpart);
 	pvalve__setControlSignal(vlv, vlv->normCtrlSig);
   
